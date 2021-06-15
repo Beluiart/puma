@@ -1,0 +1,29 @@
+.header
+   &__container
+      display: grid
+      grid-template-columns: repeat(12,1fr)
+      gap: 30px
+      align-items: center
+      padding: 40px 0
+   &__logo
+      grid-column: 1/2
+   &__menu
+      grid-column: 3/6   
+   &__list
+      display: flex
+      justify-content: space-between 
+      padding: 0  
+   &__item
+      list-style-type: none 
+      &:not(:last-child)
+         padding-right: 40px  
+   &__link
+      display: inline-block
+      text-decoration: none
+      @include link 
+      font-size: 16px
+      transition: color 0.5s
+      &:hover
+         color: $primary
+   &__button
+      grid-column: 12       
