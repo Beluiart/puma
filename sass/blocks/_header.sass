@@ -1,24 +1,29 @@
 .header
    &__container
-      padding: 40px 0
-      display: flex
+      display: grid
+      grid-template-columns: repeat(12,1fr)
+      gap: 30px
       align-items: center
-      justify-content: space-between
+      padding: 40px 0
    &__logo
-      flex: 0 0 94px
+      grid-column: 1/2
    &__menu
-      flex: 0 1 331px
-      margin-left: -300px      
+      grid-column: 3/6   
    &__list
-      display: flex   
-      justify-content: space-between
-      padding: 0
+      display: flex
+      justify-content: space-between 
+      padding: 0  
    &__item
-      list-style-type: none
+      list-style-type: none 
+      &:not(:last-child)
+         padding-right: 40px  
    &__link
+      display: inline-block
       text-decoration: none
-      @include link
+      @include link 
       font-size: 16px
-      transition: color 0.5s easy
+      transition: color 0.5s
       &:hover
          color: $primary
+   &__button
+      grid-column: 12       
